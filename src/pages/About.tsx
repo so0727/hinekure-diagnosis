@@ -19,12 +19,12 @@ export const About: React.FC = () => {
 
                 <section className={styles.section}>
                     <p className={styles.description}>
-                        MBTIなどの性格診断では語られない、あなたの心の奥底にある<br />
-                        <strong>「性格の歪み」</strong>や<strong>「扱いにくさ」</strong>を<br />
+                        一般的な性格診断では語られない、あなたの心の奥底にある
+                        <strong>「性格の歪み」</strong>や<strong>「扱いにくさ」</strong>を
                         4つの軸・8つの要素から徹底的に分析する診断です。
                     </p>
                     <p className={styles.description}>
-                        いい子ぶるのは終わりです。<br />
+                        いい子ぶるのは終わりです。
                         自分の「ひねくれ」を受け入れた時、新しい生存戦略が見えてくるかもしれません。
                     </p>
                 </section>
@@ -34,7 +34,7 @@ export const About: React.FC = () => {
 
                     <div className={styles.axisContainer}>
                         <div className={styles.axisHeader} style={{ background: '#FFB7B2' }}>
-                            <span>H (Hot/直情)</span> ⚡ <span>C (Cold/冷徹)</span>
+                            <span>H (Hot/直情)</span> - <span>C (Cold/冷徹)</span>
                         </div>
                         <h3 className={styles.axisName}>感情の歪み (Mind)</h3>
                         <p className={styles.axisDesc}>
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
 
                     <div className={styles.axisContainer}>
                         <div className={styles.axisHeader} style={{ background: '#C7CEEA' }}>
-                            <span>O (Out/他責)</span> 👈 👉 <span>I (In/自責)</span>
+                            <span>O (Out/他責)</span> - <span>I (In/自責)</span>
                         </div>
                         <h3 className={styles.axisName}>因果の歪み (Nature)</h3>
                         <p className={styles.axisDesc}>
@@ -56,7 +56,7 @@ export const About: React.FC = () => {
 
                     <div className={styles.axisContainer}>
                         <div className={styles.axisHeader} style={{ background: '#B5EAD7' }}>
-                            <span>P (Power/圧力)</span> 💪 🧠 <span>L (Logic/理屈)</span>
+                            <span>P (Power/圧力)</span> - <span>L (Logic/理屈)</span>
                         </div>
                         <h3 className={styles.axisName}>戦術の歪み (Tactics)</h3>
                         <p className={styles.axisDesc}>
@@ -67,7 +67,7 @@ export const About: React.FC = () => {
 
                     <div className={styles.axisContainer}>
                         <div className={styles.axisHeader} style={{ background: '#E2F0CB' }}>
-                            <span>K (King/王様)</span> 👑 🐺 <span>S (Solo/単独)</span>
+                            <span>K (King/王様)</span> - <span>S (Solo/単独)</span>
                         </div>
                         <h3 className={styles.axisName}>生存の歪み (Strategy)</h3>
                         <p className={styles.axisDesc}>

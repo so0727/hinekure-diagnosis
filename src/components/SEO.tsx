@@ -23,7 +23,7 @@ export const SEO: React.FC<SEOProps> = ({
             {/* Basic */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            <meta name="keywords" content="性格診断,MBTI,性格悪い,16タイプ,ひねくれ,心理テスト,無料診断,キャラクター診断" />
+            <meta name="keywords" content="性格診断,性格悪い,16タイプ,ひねくれ,心理テスト,無料診断,キャラクター診断" />
 
             {/* Open Graph / Facebook / LINE */}
             <meta property="og:type" content="website" />
