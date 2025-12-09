@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* max-width removed */
+    padding: 32px 20px 40px 20px;
+}
+
+.pageTitle {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 32px;
+}
+
+.groupSection {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.groupHeader {
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    color: var(--color-text);
+    border: var(--border-width) solid var(--color-text);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.groupTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.groupDesc {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Card Shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardImagePlaceholder {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.noImageText {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+}
+
+.cardBody {
+    padding: 12px;
+    text-align: center;
+}
+
+.charTitle {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    /* Darken the color slightly for legibility if needed, handled in JS inline */
+    filter: brightness(0.8);
+}
+
+.charId {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+/* Response Grid */
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on desktop like original */
+    }
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

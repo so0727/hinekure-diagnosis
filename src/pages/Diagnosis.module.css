@@ -1,0 +1,136 @@
+.header {
+    width: 100%;
+    /* max-width removed to fill screen */
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* max-width removed */
+    margin: 0;
+    padding: 0 20px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.questionText {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-align: center;
+    min-height: 80px;
+    /* Prevent huge jumps */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.optionBtn {
+    text-align: left;
+    /* Make buttons look clickable/selectable */
+}
+
+/* New Navigation Styles */
+.navigation {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.backBtn {
+    max-width: 200px;
+    background: transparent;
+    color: var(--color-text-light);
+    border: 1px solid var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Analyzing / Loading Styles */
+.analyzingContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    padding: 20px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e0e0e0;
+    border-top: 6px solid var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 24px;
+}
+
+.analyzingText {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.analyzingSubtext {
+    font-size: 1rem;
+    color: var(--color-text-light);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}

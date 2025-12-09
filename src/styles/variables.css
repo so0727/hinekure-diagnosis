@@ -1,0 +1,33 @@
+:root {
+  /* Palette - Pastel/Korean Stationery */
+  --color-primary: #D7B2FF;
+  /* Pastel Purple (Primary) */
+  --color-secondary: #B5EAD7;
+  /* Pastel Mint (Cool) */
+  --color-accent: #C7CEEA;
+  /* Pastel Lavender */
+  --color-warning: #FFDAC1;
+  /* Pastel Orange */
+
+  --color-bg: #F9F9F9;
+  --color-text: #555555;
+  --color-text-light: #888888;
+  --color-white: #FFFFFF;
+
+  /* Borders & Shadows */
+  --border-width: 2px;
+  --border-color: #555555;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-pop: 3px 3px 0px var(--border-color);
+  --shadow-pop-sm: 2px 2px 0px var(--border-color);
+  --shadow-pop-hover: 1px 1px 0px var(--border-color);
+
+  /* Typography */
+  /* Typography */
+  --font-base: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  /* Ideally would import a rounded font like 'M PLUS Rounded 1c' later */
+}

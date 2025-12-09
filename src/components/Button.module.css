@@ -1,0 +1,60 @@
+.button {
+    font-weight: bold;
+    border: var(--border-width) solid var(--color-text);
+    border-radius: var(--radius-full);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: visible;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* Hard shadow for pop effect */
+    box-shadow: var(--shadow-pop);
+}
+
+.button:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--color-text);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+/* Variants */
+.primary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+.accent {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+/* Sizes */
+.sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+}
+
+.md {
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.lg {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+}
+
+.full {
+    width: 100%;
+}
