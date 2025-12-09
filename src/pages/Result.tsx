@@ -99,24 +99,37 @@ export const Result: React.FC = () => {
         window.open(url, '_blank');
     };
 
+    const [generatedImage, setGeneratedImage] = React.useState<string | null>(null);
+
     const handleSaveImage = async () => {
         if (!captureRef.current) return;
 
         try {
             const canvas = await html2canvas(captureRef.current, {
                 backgroundColor: '#ffffff',
-                scale: 2, // Better resolution
+                scale: 2,
                 logging: false,
-                useCORS: true, // For cross-origin images if any
+                useCORS: true,
             });
 
             const image = canvas.toDataURL("image/png");
-            const link = document.createElement('a');
-            link.href = image;
-            link.download = `hinekure_result_${result.id}.png`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+
+            // Check if mobile (simple check)
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                // Show modal for mobile users
+                setGeneratedImage(image);
+            } else {
+                // PC: Auto download
+                const link = document.createElement('a');
+                link.href = image;
+                link.download = `hinekure_result_${result.id}.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
         } catch (error) {
             console.error("Capture failed:", error);
             alert("画像の保存に失敗しました。");
@@ -125,6 +138,28 @@ export const Result: React.FC = () => {
 
     return (
         <Layout>
+            {/* Modal for Mobile Image Save */}
+            {generatedImage && (
+                <div
+                    style={{
+                        position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.8)', zIndex: 9999,
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        padding: '20px'
+                    }}
+                    onClick={() => setGeneratedImage(null)}
+                >
+                    <p style={{ color: 'white', marginBottom: '10px', fontWeight: 'bold' }}>画像を長押しして保存してください</p>
+                    <img src={generatedImage} alt="Result" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '8px' }} />
+                    <button
+                        style={{ marginTop: '20px', padding: '10px 20px', background: 'white', border: 'none', borderRadius: '20px', fontWeight: 'bold' }}
+                        onClick={() => setGeneratedImage(null)}
+                    >
+                        閉じる
+                    </button>
+                </div>
+            )}
+
             <SEO
                 title={`${result.title}タイプの診断結果 | ひねくれタイプ診断`}
                 description={`私は【${result.title}】タイプでした。取扱注意：${result.traits.join('・')}`}
