@@ -12,7 +12,9 @@ export const Header: React.FC = () => {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Link to="/">#ひねくれタイプ診断</Link>
+                    <Link to="/">
+                        <img src="/images/banner.jpg" alt="ひねくれタイプ診断" className={styles.logoImage} />
+                    </Link>
                 </div>
 
                 <button className={styles.hamburger} onClick={toggleMenu} aria-label="Menu">

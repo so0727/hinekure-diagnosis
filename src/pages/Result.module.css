@@ -187,9 +187,27 @@
     gap: 16px;
 }
 
-.shareBtn {
+.shareRow {
+    display: flex;
+    gap: 10px;
+}
+
+.shareBtnX {
     background-color: #000;
     color: #fff;
+    flex: 1;
+}
+
+.shareBtnLine {
+    background-color: #06C755;
+    color: #fff;
+    flex: 1;
+}
+
+.shareBtnCopy {
+    background-color: #eee;
+    color: var(--color-text);
+    flex: 0.6;
 }
 
 .error {

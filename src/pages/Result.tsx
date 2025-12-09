@@ -154,11 +154,24 @@ export const Result: React.FC = () => {
                         画像を保存する
                     </Button>
 
-                    <Button onClick={handleShare} fullWidth className={styles.shareBtn}>
-                        X (Twitter) で晒す
+                    <div className={styles.shareRow}>
+                        <Button onClick={handleShare} className={styles.shareBtnX}>
+                            Xでシェア
+                        </Button>
+                        <Button onClick={() => window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank')} className={styles.shareBtnLine}>
+                            LINE
+                        </Button>
+                        <Button onClick={() => { navigator.clipboard.writeText(shareUrl); alert('リンクをコピーしました！'); }} className={styles.shareBtnCopy}>
+                            リンク
+                        </Button>
+                    </div>
+
+                    <Button onClick={() => navigate('/diagnosis')} variant="secondary" fullWidth>
+                        {/* If stats exist, they took the test. If not, maybe they just landed here. */}
+                        {location.search ? 'もう一度診断する' : 'あなたも診断してみる'}
                     </Button>
-                    <Button onClick={() => navigate('/')} variant="secondary" fullWidth>
-                        もう一度診断する
+                    <Button onClick={() => navigate('/characters')} variant="secondary" fullWidth>
+                        他のタイプを見る
                     </Button>
                 </div>
             </div>

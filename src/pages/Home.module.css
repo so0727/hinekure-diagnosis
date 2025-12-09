@@ -25,38 +25,7 @@
     max-width: 500px;
 }
 
-.heroTitle {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.2;
-    color: var(--color-text);
-    margin-bottom: 24px;
-}
-
-.heroDescription {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--color-text-light);
-    margin-bottom: 32px;
-}
-
-.startBtn {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 16px 48px;
-    font-size: 1.2rem;
-    border-radius: var(--radius-full);
-    box-shadow: 0 4px 12px rgba(215, 178, 255, 0.4);
-    /* Primary shadow */
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
-    /* Text shadow for legibility */
-}
-
-.startBtn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(215, 178, 255, 0.6);
-}
+/* ... existing styles ... */
 
 /* Hero Visual */
 .heroVisual {
@@ -66,20 +35,12 @@
     align-items: center;
 }
 
-.visualPlaceholder {
-    width: 400px;
-    height: 400px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    /* Circle shape like 16P often uses for main graphic container */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ccc;
-    font-weight: bold;
-    font-size: 1.5rem;
-    background-image: radial-gradient(#e0e0e0 10%, transparent 11%);
-    background-size: 20px 20px;
+.mainImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
 }
 
 /* Info Section (Three Columns) */

@@ -16,8 +16,7 @@ export const Home: React.FC = () => {
                 <section className={styles.heroSection}>
                     <div className={styles.heroContent}>
                         <h1 className={styles.heroTitle}>
-                            “性格の悪さ”<br />
-                            見抜きます。
+                            “性格の悪さ”見抜きます。
                         </h1>
                         <p className={styles.heroDescription}>
                             あなたの心に潜む「歪み」や「闇」を<br />
@@ -30,11 +29,8 @@ export const Home: React.FC = () => {
                             </Button>
                         </div>
                     </div>
-                    {/* Hero Illustration (Space for character visuals later) */}
                     <div className={styles.heroVisual}>
-                        <div className={styles.visualPlaceholder}>
-                            Visual Area
-                        </div>
+                        <img src="/images/main_visual.png" alt="ひねくれタイプ診断メインビジュアル" className={styles.mainImage} />
                     </div>
                 </section>
 
