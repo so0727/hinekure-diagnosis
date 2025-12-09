@@ -86,7 +86,7 @@ export const Result: React.FC = () => {
     // Let's make sure the shareUrl includes the query params.
 
     const shareText = `私は【${result.title}】タイプでした。\n` +
-        `性格の歪み：${result.traits.join(' / ')}\n\n` +
+        `取扱注意：${result.traits.join(' / ')}\n\n` +
         `📊 パラメータ\n` +
         `直情${h}% : 冷徹${c}%\n` +
         `他責${o}% : 自責${i}%\n` +
@@ -127,7 +127,7 @@ export const Result: React.FC = () => {
         <Layout>
             <SEO
                 title={`${result.title}タイプの診断結果 | ひねくれタイプ診断`}
-                description={`私は【${result.title}】タイプでした。あなたの性格の歪みは「${result.traits.join('・')}」です。`}
+                description={`私は【${result.title}】タイプでした。取扱注意：${result.traits.join('・')}`}
                 image={`/images/ogp_${result.id}.png`} /* Assuming we will create these cards later */
             />
             <div className={styles.container}>
@@ -152,7 +152,7 @@ export const Result: React.FC = () => {
                         </div>
 
                         <div className={styles.traits}>
-                            <h3>▼ あなたの欠陥</h3>
+                            <h3>▼ 取扱注意ポイント</h3>
                             <div className={styles.traitList}>
                                 {result.traits.map(t => (
                                     <span key={t} className={styles.traitTag}>{t}</span>
