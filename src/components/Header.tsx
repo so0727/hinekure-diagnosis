@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
                         性格図鑑
                     </Link>
                     <Link to="/about" className={location.pathname === '/about' ? styles.active : ''} onClick={() => setIsOpen(false)}>
-                        診断とは
+                        4つの軸
                     </Link>
                 </nav>
             </div>

@@ -21,7 +21,7 @@ export const About: React.FC = () => {
                     <p className={styles.description}>
                         一般的な性格診断では語られない、あなたの心の奥底にある
                         <strong>「性格の歪み」</strong>や<strong>「扱いにくさ」</strong>を
-                        4つの軸・8つの要素から徹底的に分析する診断です。
+                        4つの軸・16タイプから徹底的に分析する診断です。
                     </p>
                     <p className={styles.description}>
                         いい子ぶるのは終わりです。
