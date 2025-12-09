@@ -33,6 +33,9 @@ export const Header: React.FC = () => {
                     <Link to="/characters" className={location.pathname === '/characters' ? styles.active : ''} onClick={() => setIsOpen(false)}>
                         性格図鑑
                     </Link>
+                    <Link to="/about" className={location.pathname === '/about' ? styles.active : ''} onClick={() => setIsOpen(false)}>
+                        診断とは
+                    </Link>
                 </nav>
             </div>
         </header>
