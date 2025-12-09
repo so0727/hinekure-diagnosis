@@ -138,6 +138,14 @@
     margin-bottom: 4px;
 }
 
+.axisId {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin: 0 4px;
+    font-family: monospace;
+    /* Monospace to look like technical data */
+}
+
 .barHeader {
     display: flex;
     justify-content: space-between;
