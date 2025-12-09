@@ -68,8 +68,31 @@ export const Result: React.FC = () => {
         );
     }
 
-    const shareUrl = window.location.origin + window.location.pathname + '#' + location.pathname;
-    const shareText = `私は【${result.title}】タイプでした。\n性格の歪み：${result.traits.join(' / ')}\n#ひねくれタイプ診断 #性格診断`;
+    const h = getParam(location.search, 'h');
+    const c = getParam(location.search, 'c');
+    const o = getParam(location.search, 'o');
+    const i = getParam(location.search, 'i');
+    const p = getParam(location.search, 'p');
+    const l = getParam(location.search, 'l');
+    const k = getParam(location.search, 'k');
+    const s = getParam(location.search, 's');
+
+    const shareUrl = window.location.origin + window.location.pathname + location.search;
+    // Note: Using location.search in shareUrl ensures people clicking the link see the same stats? 
+    // Wait, the current app logic uses ?h=... for stats.
+    // The previous code had `window.location.origin + window.location.pathname + '#' + location.pathname` which looked wrong/weird for params.
+    // If we want users to see the result, we should probably include the search params in the URL.
+    // But currently Result.tsx reads `location.search`.
+    // Let's make sure the shareUrl includes the query params.
+
+    const shareText = `私は【${result.title}】タイプでした。\n` +
+        `性格の歪み：${result.traits.join(' / ')}\n\n` +
+        `📊 パラメータ\n` +
+        `直情${h}% : 冷徹${c}%\n` +
+        `他責${o}% : 自責${i}%\n` +
+        `圧力${p}% : 理屈${l}%\n` +
+        `王様${k}% : 単独${s}%\n\n` +
+        `#ひねくれタイプ診断`;
 
     const handleShare = () => {
         const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
