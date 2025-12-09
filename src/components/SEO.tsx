@@ -14,7 +14,7 @@ export const SEO: React.FC<SEOProps> = ({
     image = '/ogp.png',
     url
 }) => {
-    const siteUrl = 'https://hinekure-diagnosis.vercel.app'; // Placeholder until deployed
+    const siteUrl = 'https://hinekure-diagnosis.onrender.com'; // Render URL
     const currentUrl = url ? `${siteUrl}${url}` : siteUrl;
     const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
@@ -23,6 +23,7 @@ export const SEO: React.FC<SEOProps> = ({
             {/* Basic */}
             <title>{title}</title>
             <meta name="description" content={description} />
+            <meta name="keywords" content="性格診断,MBTI,性格悪い,16タイプ,ひねくれ,心理テスト,無料診断,キャラクター診断" />
 
             {/* Open Graph / Facebook / LINE */}
             <meta property="og:type" content="website" />
