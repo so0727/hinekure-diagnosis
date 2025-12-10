@@ -220,7 +220,7 @@ export const Result: React.FC = () => {
                                 </div>
                                 <div className={styles.relationText}>
                                     <div className={styles.relationType}>{RESULTS[result.bestMatch].title}</div>
-                                    <div className={styles.relationName}>{RESULTS[result.bestMatch].name}</div>
+                                    <div className={styles.relationName}>{RESULTS[result.bestMatch].id}</div>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@ export const Result: React.FC = () => {
                                 </div>
                                 <div className={styles.relationText}>
                                     <div className={styles.relationType}>{RESULTS[result.worstMatch].title}</div>
-                                    <div className={styles.relationName}>{RESULTS[result.worstMatch].name}</div>
+                                    <div className={styles.relationName}>{RESULTS[result.worstMatch].id}</div>
                                 </div>
                             </div>
                         </div>
