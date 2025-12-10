@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { QUESTIONS } from '../data/questions';
 import { calculateResult } from '../utils/logic';
 import type { AnswerValue } from '../utils/logic';
@@ -14,8 +14,22 @@ export const Diagnosis: React.FC = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [answers, setAnswers] = useState<Record<number, AnswerValue>>({});
 
-    const currentQuestion = QUESTIONS[currentIndex];
-    const totalQuestions = QUESTIONS.length;
+    const location = useLocation();
+    const isSimple = new URLSearchParams(location.search).get('mode') === 'simple';
+
+    // Simple mode: Select 5 questions from each 12-question block (Total 20)
+    // Structure assumed: 12 H/C, 12 O/I, 12 P/L, 12 K/S in order.
+    const questions = React.useMemo(() => {
+        if (!isSimple) return QUESTIONS;
+        const q1 = QUESTIONS.slice(0, 5);
+        const q2 = QUESTIONS.slice(12, 17);
+        const q3 = QUESTIONS.slice(24, 29);
+        const q4 = QUESTIONS.slice(36, 41);
+        return [...q1, ...q2, ...q3, ...q4];
+    }, [isSimple]);
+
+    const currentQuestion = questions[currentIndex];
+    const totalQuestions = questions.length;
 
     const handleAnswer = (value: AnswerValue) => {
         const newAnswers = { ...answers, [currentQuestion.id]: value };
@@ -39,7 +53,7 @@ export const Diagnosis: React.FC = () => {
     };
 
     const finishDiagnosis = (finalAnswers: Record<number, AnswerValue>) => {
-        const { id, scores } = calculateResult(finalAnswers, QUESTIONS);
+        const { id, scores } = calculateResult(finalAnswers, questions);
         // Create query string: ?h=60&o=70&p=20&k=90
         // We only need one side of each pair to know the balance, 
         // but passing all might be easier for reading.
