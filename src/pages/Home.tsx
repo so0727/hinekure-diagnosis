@@ -29,7 +29,7 @@ export const Home: React.FC = () => {
                             </Button>
                             <p className={styles.note} style={{ marginTop: '8px' }}>※完全無料・登録不要</p>
 
-                            <Button onClick={() => navigate('/diagnosis?mode=simple')} size="sm" variant="text" style={{ textDecoration: 'underline', color: '#666', fontSize: '0.9rem', marginTop: '16px' }}>
+                            <Button onClick={() => navigate('/diagnosis?mode=simple')} size="sm" variant="text" style={{ color: '#666', fontSize: '0.9rem', marginTop: '16px' }}>
                                 時間がない方はこちら（20問・簡易版）
                             </Button>
                         </div>

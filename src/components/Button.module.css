@@ -23,6 +23,27 @@
     transform: translate(2px, 2px);
 }
 
+.text {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    color: #666;
+    text-decoration: none;
+    /* Changed to none */
+    font-size: 0.9rem;
+    height: auto;
+}
+
+.text:hover {
+    color: #333;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    text-decoration: underline;
+    /* Add underline on hover only */
+}
+
 /* Variants */
 .primary {
     background-color: var(--color-primary);
