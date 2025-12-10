@@ -26,12 +26,13 @@
 }
 
 .groupHeader {
-    padding: 16px;
-    border-radius: var(--radius-sm);
-    margin-bottom: 16px;
+    padding: 16px 20px;
+    border-radius: 0;
+    margin: 0 -20px 16px -20px;
+    /* Negative margin to bleed to edge */
     color: var(--color-text);
-    border: var(--border-width) solid var(--color-text);
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    /* border: var(--border-width) solid var(--color-text); Removed border for bar style */
+    /* box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1); Removed shadow */
 }
 
 .groupTitle {
