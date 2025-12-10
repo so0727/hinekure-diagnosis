@@ -48,8 +48,8 @@
     margin-top: -30px;
     /* Keep this for the visual overlap */
     z-index: 2;
-    padding: 0 20px;
-    /* Standardize side padding */
+    padding: 0;
+    /* Removed padding to allow full-width borders */
 }
 
 .imageContainer {
@@ -97,6 +97,13 @@
 .description {
     line-height: 1.8;
     font-size: 0.95rem;
+    padding: 0 20px;
+    /* added padding */
+}
+
+/* Added .traits block to handle padding for the section */
+.traits {
+    padding: 0 20px;
 }
 
 .traits h3 {
