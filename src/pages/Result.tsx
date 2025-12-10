@@ -213,7 +213,7 @@ export const Result: React.FC = () => {
                     <div className={styles.relationshipGrid}>
                         {/* Best Match */}
                         <div className={`${styles.relationCard} ${styles.bestMatch}`}>
-                            <div className={styles.relationLabel}>😍 最高の相性</div>
+                            <div className={styles.relationLabel}>最高の相性</div>
                             <div className={styles.relationContent} onClick={() => navigate(`/result/${result.bestMatch}`)}>
                                 <div className={styles.relationIcon}>
                                     <img src={RESULTS[result.bestMatch].image || '/images/no_image.png'} alt={RESULTS[result.bestMatch].title} />
@@ -227,7 +227,7 @@ export const Result: React.FC = () => {
 
                         {/* Worst Match */}
                         <div className={`${styles.relationCard} ${styles.worstMatch}`}>
-                            <div className={styles.relationLabel}>💀 最悪の相性</div>
+                            <div className={styles.relationLabel}>最悪の相性</div>
                             <div className={styles.relationContent} onClick={() => navigate(`/result/${result.worstMatch}`)}>
                                 <div className={styles.relationIcon}>
                                     <img src={RESULTS[result.worstMatch].image || '/images/no_image.png'} alt={RESULTS[result.worstMatch].title} />
