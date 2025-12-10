@@ -33,7 +33,7 @@ export const About: React.FC = () => {
                     <h2 className={styles.sectionTitle}>4つの歪み軸</h2>
 
                     <div className={styles.axisContainer}>
-                        <div className={styles.axisHeader} style={{ background: '#FFB7B2' }}>
+                        <div className={styles.axisHeader} style={{ background: '#D7B2FF' }}>
                             <span>H (Hot/直情)</span> - <span>C (Cold/冷徹)</span>
                         </div>
                         <h3 className={styles.axisName}>感情の歪み (Mind)</h3>
@@ -44,7 +44,7 @@ export const About: React.FC = () => {
                     </div>
 
                     <div className={styles.axisContainer}>
-                        <div className={styles.axisHeader} style={{ background: '#C7CEEA' }}>
+                        <div className={styles.axisHeader} style={{ background: '#B5EAD7' }}>
                             <span>O (Out/他責)</span> - <span>I (In/自責)</span>
                         </div>
                         <h3 className={styles.axisName}>因果の歪み (Nature)</h3>
@@ -55,7 +55,7 @@ export const About: React.FC = () => {
                     </div>
 
                     <div className={styles.axisContainer}>
-                        <div className={styles.axisHeader} style={{ background: '#B5EAD7' }}>
+                        <div className={styles.axisHeader} style={{ background: '#D7B2FF' }}>
                             <span>P (Power/圧力)</span> - <span>L (Logic/理屈)</span>
                         </div>
                         <h3 className={styles.axisName}>戦術の歪み (Tactics)</h3>
@@ -66,7 +66,7 @@ export const About: React.FC = () => {
                     </div>
 
                     <div className={styles.axisContainer}>
-                        <div className={styles.axisHeader} style={{ background: '#E2F0CB' }}>
+                        <div className={styles.axisHeader} style={{ background: '#B5EAD7' }}>
                             <span>K (King/王様)</span> - <span>S (Solo/単独)</span>
                         </div>
                         <h3 className={styles.axisName}>生存の歪み (Strategy)</h3>
