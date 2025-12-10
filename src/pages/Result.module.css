@@ -4,6 +4,14 @@
     height: 100%;
     animation: fadeIn 0.5s ease;
     padding-bottom: 40px;
+    max-width: 600px;
+    /* Constrain width for PC */
+    margin: 0 auto;
+    /* Center on PC */
+    background: #fff;
+    /* Ensure white background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for card feel */
 }
 
 .header {
