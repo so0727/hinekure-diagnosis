@@ -19,13 +19,15 @@
 
 .questionText {
     font-size: 1.4rem;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     text-align: center;
-    min-height: 80px;
-    /* Prevent huge jumps */
+    min-height: 140px;
+    /* Increased to prevent layout shift */
     display: flex;
     align-items: center;
+    /* Center vertically */
     justify-content: center;
+    padding: 0 10px;
 }
 
 .options {
