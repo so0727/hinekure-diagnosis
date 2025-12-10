@@ -18,4 +18,6 @@ export interface CharacterType {
     traits: string[];
     color: string; // Hex for the type card
     image?: string; // Path to character illustration
+    bestMatch: string; // ID of the best match type
+    worstMatch: string; // ID of the worst match type
 }
