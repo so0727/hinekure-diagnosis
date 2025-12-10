@@ -218,6 +218,9 @@ export const Result: React.FC = () => {
                         <Button onClick={() => window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank')} className={styles.shareBtnLine}>
                             LINE
                         </Button>
+                        <Button onClick={() => window.open('https://instagram.com', '_blank')} className={styles.shareBtnInsta}>
+                            Insta
+                        </Button>
                         <Button onClick={() => { navigator.clipboard.writeText(shareUrl); alert('リンクをコピーしました！'); }} className={styles.shareBtnCopy}>
                             リンク
                         </Button>
