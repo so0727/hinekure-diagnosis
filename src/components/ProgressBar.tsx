@@ -7,7 +7,7 @@ interface ProgressBarProps {
     onBack?: () => void;
 }
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({ current, total }) => {
+export const ProgressBar: React.FC<ProgressBarProps> = ({ current, total, onBack }) => {
     const progress = Math.min(100, (current / total) * 100);
 
     return (
