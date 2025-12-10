@@ -73,7 +73,11 @@ export const Diagnosis: React.FC = () => {
     return (
         <Layout>
             <div className={styles.header}>
-                <ProgressBar current={currentIndex + 1} total={totalQuestions} />
+                <ProgressBar
+                    current={currentIndex + 1}
+                    total={totalQuestions}
+                    onBack={currentIndex > 0 ? handleBack : undefined}
+                />
             </div>
 
             <div className={styles.card}>
@@ -93,14 +97,6 @@ export const Diagnosis: React.FC = () => {
                         全然ちがう
                     </Button>
                 </div>
-
-                {currentIndex > 0 && (
-                    <div className={styles.navigation}>
-                        <Button onClick={handleBack} variant="secondary" className={styles.backBtn}>
-                            ひとつ戻る
-                        </Button>
-                    </div>
-                )}
             </div>
         </Layout>
     );

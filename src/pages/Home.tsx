@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
                 <section className={styles.heroSection}>
                     <div className={styles.heroContent}>
                         <h1 className={styles.heroTitle}>
-                            “性格の悪さ”見抜きます。
+                            “性格の悪さ”<br className={styles.mobileBr} />見抜きます。
                         </h1>
                         <p className={styles.heroDescription}>
                             あなたの心に潜む「歪み」や「闇」を<br />
@@ -24,14 +24,15 @@ export const Home: React.FC = () => {
                             ガラスのハートお断りの、辛口性格診断テストです。
                         </p>
                         <div className={styles.actionArea}>
-                            <Button onClick={() => navigate('/diagnosis')} size="large" className={styles.startBtn} variant="primary">
+                            <Button onClick={() => navigate('/diagnosis')} size="lg" className={styles.startBtn} variant="primary">
                                 診断テストをする
                             </Button>
                             <p className={styles.note}>※完全無料・登録不要</p>
                         </div>
-                        <div className={styles.heroVisual}>
-                            <img src="/images/main_visual.png" alt="ひねくれタイプ診断メインビジュアル" className={styles.mainImage} />
-                        </div>
+                    </div>
+                    <div className={styles.heroVisual}>
+                        <img src="/images/main_visual.png" alt="ひねくれタイプ診断メインビジュアル" className={styles.mainImage} />
+                    </div>
                 </section>
 
                 {/* Features / Info Section (16P usually has 3 columns below) */}
