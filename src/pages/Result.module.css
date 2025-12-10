@@ -197,19 +197,31 @@
 
 .shareRow {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    /* Slightly reduced gap */
+    margin-bottom: 20px;
+}
+
+.shareBtnX,
+.shareBtnLine,
+.shareBtnCopy {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 10px 4px;
+    /* Reduced side padding */
+    height: auto;
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 .shareBtnX {
     background-color: #000;
     color: #fff;
-    flex: 1;
 }
 
 .shareBtnLine {
     background-color: #06C755;
     color: #fff;
-    flex: 1;
 }
 
 .shareBtnCopy {
