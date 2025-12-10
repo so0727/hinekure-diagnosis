@@ -23,15 +23,15 @@ export const Home: React.FC = () => {
                             たった5分で徹底的に暴き出す。<br />
                             ガラスのハートお断りの、辛口性格診断テストです。
                         </p>
-                        <div className={styles.heroAction}>
-                            <Button onClick={() => navigate('/diagnosis')} size="lg" className={styles.startBtn}>
-                                診断テストをする &gt;
+                        <div className={styles.actionArea}>
+                            <Button onClick={() => navigate('/diagnosis')} size="large" className={styles.startBtn} variant="primary">
+                                診断テストをする
                             </Button>
+                            <p className={styles.note}>※完全無料・登録不要</p>
                         </div>
-                    </div>
-                    <div className={styles.heroVisual}>
-                        <img src="/images/main_visual.png" alt="ひねくれタイプ診断メインビジュアル" className={styles.mainImage} />
-                    </div>
+                        <div className={styles.heroVisual}>
+                            <img src="/images/main_visual.png" alt="ひねくれタイプ診断メインビジュアル" className={styles.mainImage} />
+                        </div>
                 </section>
 
                 {/* Features / Info Section (16P usually has 3 columns below) */}
