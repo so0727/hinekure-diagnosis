@@ -197,10 +197,10 @@ export const Result: React.FC = () => {
                         {/* Percentage Bars */}
                         {location.search && (
                             <div className={styles.statsContainer}>
-                                <StatsBar title="感情 (Mind)" labelL="直情" idL="H" labelR="冷徹" idR="C" pctL={getParam(location.search, 'h')} pctR={getParam(location.search, 'c')} color="#FFB7B2" />
-                                <StatsBar title="因果 (Nature)" labelL="他責" idL="O" labelR="自責" idR="I" pctL={getParam(location.search, 'o')} pctR={getParam(location.search, 'i')} color="#C7CEEA" />
-                                <StatsBar title="戦術 (Tactics)" labelL="圧力" idL="P" labelR="理屈" idR="L" pctL={getParam(location.search, 'p')} pctR={getParam(location.search, 'l')} color="#B5EAD7" />
-                                <StatsBar title="生存 (Strategy)" labelL="王様" idL="K" labelR="単独" idR="S" pctL={getParam(location.search, 'k')} pctR={getParam(location.search, 's')} color="#E2F0CB" />
+                                <StatsBar title="感情 (Mind)" labelL="直情" idL="H" labelR="冷徹" idR="C" pctL={getParam(location.search, 'h')} pctR={getParam(location.search, 'c')} color="#D7B2FF" />
+                                <StatsBar title="因果 (Nature)" labelL="他責" idL="O" labelR="自責" idR="I" pctL={getParam(location.search, 'o')} pctR={getParam(location.search, 'i')} color="#B5EAD7" />
+                                <StatsBar title="戦術 (Tactics)" labelL="圧力" idL="P" labelR="理屈" idR="L" pctL={getParam(location.search, 'p')} pctR={getParam(location.search, 'l')} color="#D7B2FF" />
+                                <StatsBar title="生存 (Strategy)" labelL="王様" idL="K" labelR="単独" idR="S" pctL={getParam(location.search, 'k')} pctR={getParam(location.search, 's')} color="#B5EAD7" />
                             </div>
                         )}
                     </div>
