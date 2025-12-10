@@ -77,13 +77,12 @@ export const Result: React.FC = () => {
     const k = getParam(location.search, 'k');
     const s = getParam(location.search, 's');
 
-    const shareUrl = window.location.origin + window.location.pathname + location.search;
     // Note: Using location.search in shareUrl ensures people clicking the link see the same stats? 
-    // Wait, the current app logic uses ?h=... for stats.
-    // The previous code had `window.location.origin + window.location.pathname + '#' + location.pathname` which looked wrong/weird for params.
-    // If we want users to see the result, we should probably include the search params in the URL.
-    // But currently Result.tsx reads `location.search`.
-    // Let's make sure the shareUrl includes the query params.
+    // Fix for HashRouter: content is inside the hash
+    // We need to construct: origin + pathname + '#' + react_router_pathname + react_router_search
+    // Or simpler: just use window.location.href (but that might include unrelated junk if not careful, though usually fine)
+    // Let's be explicit to avoid "sharing the home page"
+    const shareUrl = `${window.location.origin}${window.location.pathname}#${location.pathname}${location.search}`;
 
     const shareText = `私は【${result.title}】タイプでした。\n` +
         `取扱注意：${result.traits.join(' / ')}\n\n` +
