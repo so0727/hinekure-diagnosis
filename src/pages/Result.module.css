@@ -4,18 +4,17 @@
     height: 100%;
     animation: fadeIn 0.5s ease;
     padding-bottom: 40px;
-    max-width: 600px;
-    /* Constrain width for PC */
+    max-width: 1200px;
+    /* Standardize with other pages */
     margin: 0 auto;
     /* Center on PC */
-    background: #fff;
-    /* Ensure white background */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    /* Subtle shadow for card feel */
+    /* background: #fff; Removed as layout handles background */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); Removed */
 }
 
 .header {
-    padding: 32px 16px 48px;
+    padding: 32px 20px 48px;
+    /* Standardize side padding */
     text-align: center;
     position: relative;
     background-image: radial-gradient(rgba(255, 255, 255, 0.2) 15%, transparent 16%);
@@ -49,8 +48,8 @@
     margin-top: -30px;
     /* Keep this for the visual overlap */
     z-index: 2;
-    padding: 0 16px;
-    /* Add padding to body content */
+    padding: 0 20px;
+    /* Standardize side padding */
 }
 
 .imageContainer {
