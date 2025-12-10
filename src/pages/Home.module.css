@@ -125,6 +125,8 @@
 
     .heroTitle {
         font-size: 3.5rem;
+        white-space: nowrap;
+        /* Prevent wrapping on PC */
     }
 
     .heroVisual {
