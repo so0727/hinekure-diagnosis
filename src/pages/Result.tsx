@@ -206,6 +206,41 @@ export const Result: React.FC = () => {
                     </div>
                 </div>
 
+
+                {/* Compatibility Section */}
+                <div className={styles.relationshipArea}>
+                    <h3 className={styles.relationshipTitle}>▼ 人間関係の傾向</h3>
+                    <div className={styles.relationshipGrid}>
+                        {/* Best Match */}
+                        <div className={`${styles.relationCard} ${styles.bestMatch}`}>
+                            <div className={styles.relationLabel}>😍 最高の相性</div>
+                            <div className={styles.relationContent} onClick={() => navigate(`/result/${result.bestMatch}`)}>
+                                <div className={styles.relationIcon}>
+                                    <img src={RESULTS[result.bestMatch].image || '/images/no_image.png'} alt={RESULTS[result.bestMatch].title} />
+                                </div>
+                                <div className={styles.relationText}>
+                                    <div className={styles.relationType}>{RESULTS[result.bestMatch].title}</div>
+                                    <div className={styles.relationName}>{RESULTS[result.bestMatch].name}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Worst Match */}
+                        <div className={`${styles.relationCard} ${styles.worstMatch}`}>
+                            <div className={styles.relationLabel}>💀 最悪の相性</div>
+                            <div className={styles.relationContent} onClick={() => navigate(`/result/${result.worstMatch}`)}>
+                                <div className={styles.relationIcon}>
+                                    <img src={RESULTS[result.worstMatch].image || '/images/no_image.png'} alt={RESULTS[result.worstMatch].title} />
+                                </div>
+                                <div className={styles.relationText}>
+                                    <div className={styles.relationType}>{RESULTS[result.worstMatch].title}</div>
+                                    <div className={styles.relationName}>{RESULTS[result.worstMatch].name}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className={styles.actions}>
                     <Button onClick={handleSaveImage} fullWidth variant="primary">
                         画像を保存する

@@ -201,4 +201,3 @@ export const RESULTS: Record<string, CharacterType> = {
         worstMatch: 'HOPS'
     }
 };
-};
