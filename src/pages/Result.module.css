@@ -117,7 +117,8 @@
 /* Stats Bars - 16P Style */
 .statsContainer {
     margin-top: 16px;
-    padding-top: 24px;
+    padding: 24px 20px 0;
+    /* Updated padding for alignment */
     border-top: var(--border-width) solid var(--border-color);
 }
 
