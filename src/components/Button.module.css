@@ -24,24 +24,24 @@
 }
 
 .text {
-    background: none;
-    border: none;
+    background: transparent;
+    border: 2px solid #ccc;
     box-shadow: none;
-    padding: 0;
+    padding: 10px 20px;
     color: #666;
     text-decoration: none;
-    /* Changed to none */
     font-size: 0.9rem;
     height: auto;
+    border-radius: 999px;
+    margin-top: 10px;
 }
 
 .text:hover {
     color: #333;
-    transform: none;
-    box-shadow: none;
-    background: none;
-    text-decoration: underline;
-    /* Add underline on hover only */
+    border-color: #999;
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
 }
 
 /* Variants */
