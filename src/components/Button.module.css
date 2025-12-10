@@ -24,9 +24,10 @@
 }
 
 .text {
-    background: transparent;
-    border: 2px solid #ccc;
-    box-shadow: none;
+    background: #fff;
+    /* White bg to cover shadow behind if any? Or transparent? Better white for button look */
+    border: 2px solid #666;
+    box-shadow: 4px 4px 0px #666;
     padding: 10px 20px;
     color: #666;
     text-decoration: none;
@@ -38,10 +39,16 @@
 
 .text:hover {
     color: #333;
-    border-color: #999;
+    border-color: #333;
+    box-shadow: 4px 4px 0px #333;
     transform: translateY(-2px);
-    background: rgba(0, 0, 0, 0.05);
+    background: #fff;
     text-decoration: none;
+}
+
+.text:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #333;
 }
 
 /* Variants */
