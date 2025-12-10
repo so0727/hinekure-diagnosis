@@ -3,25 +3,22 @@
     flex-direction: column;
     height: 100%;
     animation: fadeIn 0.5s ease;
-    padding-bottom: 40px;
+    padding: 0 0 40px 0;
+    /* Explicitly 0 side/top padding */
     max-width: 1200px;
-    /* Standardize with other pages */
     margin: 0 auto;
-    /* Center on PC */
-    /* background: #fff; Removed as layout handles background */
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); Removed */
 }
 
 .header {
     padding: 32px 20px 48px;
-    /* Standardize side padding */
     text-align: center;
     position: relative;
     background-image: radial-gradient(rgba(255, 255, 255, 0.2) 15%, transparent 16%);
     background-size: 10px 10px;
     border-bottom: var(--border-width) solid var(--border-color);
     width: 100%;
-    /* margin: 0; Reset negative margins from old card style */
+    margin: 0;
+    /* Align to edge */
 }
 
 .id {
